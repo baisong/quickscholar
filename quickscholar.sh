@@ -10,12 +10,16 @@ fi
 # Runs quickstart-create, then swaps out the source to OpenScholar git repo.
 drush quickstart-destroy os.dev -y
 drush quickstart-create os.dev -y
-git clone https://github.com/openscholar/openscholar
 
-# Runs default install
+# Clears the openscholar git repository
+if [ -d "$BASEDIR/openscholar"]
+then
+    rm -rf $BASEDIR/openscholar
+fi
+git clone https://github.com/openscholar/openscholar
 cd $BASEDIR/openscholar
 
-# wipes the www folder and rebuilds
+# Wipes the www folder and rebuilds
 chmod 777 www/sites/default
 rm -rf www/
 mkdir www
@@ -29,8 +33,11 @@ drush vset purl_base_domain 'http://os.dev'
 #drush mi --all --user=1
 
 cd $BASEDIR
-mv os.dev os.dev.bak
-ln -s $BASEDIR/openscholar/www os.dev
+if [ -d "os.dev" ]
+then
+    mv os.dev os.dev.quickstart_orig
+fi
+ln -s openscholar/www os.dev
 
 echo "Done. You can now visit your site at http://os.dev"
 echo " "
