@@ -12,7 +12,7 @@ drush quickstart-destroy os.dev -y
 drush quickstart-create os.dev -y
 
 # Clears the openscholar git repository
-if [ -d "$BASEDIR/openscholar"]
+if [ -d "$BASEDIR/openscholar" ]
 then
     rm -rf $BASEDIR/openscholar
 fi
