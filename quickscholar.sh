@@ -39,15 +39,18 @@ then
 fi
 ln -s openscholar/www os.dev
 
-echo "Done. You can now visit your site at http://os.dev"
+echo " "
+echo "Quickscholar: done!"
+echo "You can now visit your site at:"
 echo " "
 echo "    http://os.dev"
 echo " "
-echo "If you haven't done so, you may wish to set up git"
+echo "If you haven't done so, you may wish to set up git:"
 echo " "
 echo "    git config --global user.name \"Your Name\""
 echo "    git config --global user.email you@example.com"
 echo " "
+
 # Opens the installed site's front page
 #chromium-browser& http://os.dev
 #chromium-browser& http://os.dev/install.php?profile=openscholar&locale=en
