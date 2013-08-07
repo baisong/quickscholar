@@ -20,8 +20,8 @@ You can have an identical best-practice, open-source development environment on 
 
 Now you have a fully functional OpenScholar development environment.
 
-Local URL: http://os.dev
-Local repo: ~/websites/openscholar
-Local webroot ~/websites/os.dev
+* **Local URL**: http://os.dev
+* **Local git repo**: ~/websites/openscholar
+* **Local webroot**: ~/websites/os.dev
 
 ...with drush, ubuntu, and all the other goodies packaged with Quickstart.
